@@ -1,0 +1,19 @@
+T- Type
+S, U, V, 2nd, 3rd, 4th Type
+E - Element
+K - Key
+V - Value
+N - Number
+
+
+
+T getValue() returns the value if and only if the state is OPEN, otherwise returns null.
+void setValue(T item) sets the value to item if and only if the state is OPEN, otherwise it ignores the item.
+Closeable(T item, ContainerState state) places item in the container and sets the state to the specified value.
+    Note you can put something in the container then close it this way.
+Closeable() places null in the value and sets the state to CLOSED.
+ContainerState getState() returns whether or not the container is open.
+void open() set the container state to OPEN.
+void close() set the container state to CLOSED.
+String toString() that returns a string version of what it contains, but only if the container is OPEN.
+     If the container is CLOSED, then returns an empty string
